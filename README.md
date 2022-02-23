@@ -5,3 +5,9 @@ Nasci em Frutal-MG, onde vivi até os meus 18 anos, depois me mudei para uma cid
 Já no fim de 2021 eu fui contratado pela FIEMG-SESI para ser analista de dados para a parte de Saúde e Segurança do Trabalho (SST) do grupo Algar, onde trabalho atualmente com manuseio de dados, principalmente em planilhas do Google Sheets, e também monto um dashboard no Data Studio que é exibido aos acionistas mensalmente.
 ----
 ####
+
+
+
+
+Nesse estudo de caso 1 foram utilizados dados do site kaggle. Utilizando os dados do "Delivery Center: Food & Goods orders in Brazil"
+Que pode ser encontrado no link: https://www.kaggle.com/nosbielcs/brazilian-delivery-center
