@@ -5,7 +5,7 @@
 
 
 
-Nesse estudo de CASO 1 foram utilizados dados do site _kaggle_ 
+Nesse estudo de CASO 1 foram utilizados dados do site _kaggle_. 
 Utilizando os dados do "Delivery Center: Food & Goods orders in Brazil".
 
 Que pode ser encontrado no link: https://www.kaggle.com/nosbielcs/brazilian-delivery-center
