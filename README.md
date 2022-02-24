@@ -5,7 +5,7 @@
 
 
 
-Nesse estudo de caso 1 foram utilizados dados do site **kaggle**. 
+Nesse estudo de CASO 1 foram utilizados dados do site _kaggle_ 
 Utilizando os dados do "Delivery Center: Food & Goods orders in Brazil".
 
 Que pode ser encontrado no link: https://www.kaggle.com/nosbielcs/brazilian-delivery-center
@@ -15,6 +15,6 @@ Que pode ser encontrado no link: https://www.kaggle.com/nosbielcs/brazilian-deli
 
 
 
-No caso 2 os dados utilizados foram retirados do site: ourworldindata
+No CASO 2 os dados utilizados foram retirados do site _ourworldindata_
 
 Que pode ser encontrado no link: https://ourworldindata.org/covid-deaths
