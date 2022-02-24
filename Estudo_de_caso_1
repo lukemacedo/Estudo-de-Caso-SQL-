@@ -1,23 +1,17 @@
-#ESTUDO_DE_CASO_1
-#"Delivery Center: Food & Goods orders in Brazil"
-# DADOS: https://www.kaggle.com/nosbielcs/brazilian-delivery-center
-
-#########################################################################################################################################################################
-#########################################################################################################################################################################
 
 # CRIANDO TABELAS E CARREGANDOS OS DADOS VIA LINHA DE COMANDO
 # Cria a tabela
-CREATE TABLE `exec4`.`channels` (
+CREATE TABLE `exercicio_4`.`channels` (
   `channel_id` int DEFAULT NULL,
   `channel_name` text,
   `channel_type` text);
 
 # Carrega os dados
-LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/channels.csv' INTO TABLE `exec4`.`channels` CHARACTER SET UTF8
+LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/channels.csv' INTO TABLE `exercicio_4`.`channels` CHARACTER SET UTF8
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
 # Cria a tabela
-CREATE TABLE `exec4`.`hubs` (
+CREATE TABLE `exercicio_4`.`hubs` (
   `hub_id` int DEFAULT NULL,
   `hub_name` text,
   `hub_city` text,
@@ -26,11 +20,11 @@ CREATE TABLE `exec4`.`hubs` (
   `hub_longitude` double DEFAULT NULL);
 
 # Carrega os dados
-LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/hubs.csv' INTO TABLE `exec4`.`hubs` CHARACTER SET UTF8
+LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/hubs.csv' INTO TABLE `exercicio_4`.`hubs` CHARACTER SET UTF8
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
 # Cria a tabela
-CREATE TABLE `exec4`.`stores` (
+CREATE TABLE `exercicio_4`.`stores` (
   `store_id` int DEFAULT NULL,
   `hub_id` int DEFAULT NULL,
   `store_name` text,
@@ -40,21 +34,21 @@ CREATE TABLE `exec4`.`stores` (
   `store_longitude` text);
 
   # Carrega os dados
-LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/stores.csv' INTO TABLE `exec4`.`stores` CHARACTER SET UTF8
+LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/stores.csv' INTO TABLE `exercicio_4`.`stores` CHARACTER SET UTF8
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
 # Cria tabela
-CREATE TABLE `exec4`.`drivers` (
+CREATE TABLE `exercicio_4`.`drivers` (
   `driver_id` int DEFAULT NULL,
   `driver_modal` text,
   `driver_type` text);
 
   # Carrega os dados
-LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/drivers.csv' INTO TABLE `exec4`.`drivers` CHARACTER SET UTF8
+LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/drivers.csv' INTO TABLE `exercicio_4`.`drivers` CHARACTER SET UTF8
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
 # Cria tabela
-CREATE TABLE `exec4`.`deliveries` (
+CREATE TABLE `exercicio_4`.`deliveries` (
   `delivery_id` int DEFAULT NULL,
   `delivery_order_id` int DEFAULT NULL,
   `driver_id` int DEFAULT NULL,
@@ -62,11 +56,11 @@ CREATE TABLE `exec4`.`deliveries` (
   `delivery_status` text);
 
   # Carrega os dados
-LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/deliveries.csv' INTO TABLE `exec4`.`deliveries` CHARACTER SET UTF8
+LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/deliveries.csv' INTO TABLE `exercicio_4`.`deliveries` CHARACTER SET UTF8
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
 # Cria tabela
-CREATE TABLE `exec4`.`payments` (
+CREATE TABLE `exercicio_4`.`payments` (
   `payment_id` int DEFAULT NULL,
   `payment_order_id` int DEFAULT NULL,
   `payment_amount` double DEFAULT NULL,
@@ -75,11 +69,11 @@ CREATE TABLE `exec4`.`payments` (
   `payment_status` text);
 
   # Carrega os dados
-LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/payments.csv' INTO TABLE `exec4`.`payments` CHARACTER SET UTF8
+LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/payments.csv' INTO TABLE `exercicio_4`.`payments` CHARACTER SET UTF8
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
 # Cria a tabela
-CREATE TABLE `exec4`.`orders` (
+CREATE TABLE `exercicio_4`.`orders` (
   `order_id` int DEFAULT NULL,
   `store_id` int DEFAULT NULL,
   `channel_id` int DEFAULT NULL,
@@ -111,7 +105,7 @@ CREATE TABLE `exec4`.`orders` (
   `order_metric_cycle_time` text);
 
 # Carrega os dados
-LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/orders.csv' INTO TABLE `exec4`.`orders` CHARACTER SET UTF8
+LOAD DATA LOCAL INFILE '/Users/dmpm/Dropbox/DSA/SQL-Para-Data-Science/Cap06/Exercicio4/archive/orders.csv' INTO TABLE `exercicio_4`.`orders` CHARACTER SET UTF8
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
 
