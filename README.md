@@ -1,4 +1,4 @@
-#**PORTFÓLIO SQL**
+# **PORTFÓLIO SQL**
 ## CASO 1 - Delivery Center: Food & Goods orders in Brazil
 
 
