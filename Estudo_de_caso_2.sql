@@ -26,7 +26,7 @@ SELECT
 FROM PortfolioProject..CovidDeaths
 ORDER BY 1,2;
 
---Total de casos Vs Total de mortes pelo país selecionado
+--Total de casos Vs Total de mortes pelo paÃ­s selecionado
 --Looking at Total Cases vs Total Deaths by selected country
 SELECT
 	location, 
@@ -38,38 +38,38 @@ FROM PortfolioProject..CovidDeaths
 WHERE location LIKE '%brazil%'
 ORDER BY 1,2;
 
---Total de casos Vs População do país selecionado
+--Total de casos Vs PopulaÃ§Ã£o do paÃ­s selecionado
 --Looking at Total Cases vs Population by selected country
 SELECT
 	location, 
 	date, 
 	total_cases,  
 	population,
-	(total_cases/population)*100 AS 'Percental de casos na população'
+	(total_cases/population)*100 AS 'Percental de casos na populaÃ§Ã£o'
 FROM PortfolioProject..CovidDeaths
 WHERE location LIKE '%brazil%'
 ORDER BY 1,2;
 
---Países com maior índice de infecção pela população
+--PaÃ­ses com maior Ã­ndice de infecÃ§Ã£o pela populaÃ§Ã£o
 --Looking at Coutries with highest infection rate compared to Population
 SELECT
 	location,
 	population,
-	MAX(total_cases) as 'Maior índice de infecção',  
-	MAX((total_cases/population))*100 AS 'Percental de casos na população'
+	MAX(total_cases) as 'Maior Ã­ndice de infecÃ§Ã£o',  
+	MAX((total_cases/population))*100 AS 'Percental de casos na populaÃ§Ã£o'
 FROM PortfolioProject..CovidDeaths
 GROUP BY location, population
-ORDER BY 'Percental de casos na população' DESC;
+ORDER BY 'Percental de casos na populaÃ§Ã£o' DESC;
 
---Total de Morte Por País
+--Total de Morte Por PaÃ­s
 --Showing Countries with the highest Death Count per Population
 SELECT
 	location,
-	MAX(CAST(total_deaths AS INT)) AS 'Total de Mortes por País'
+	MAX(CAST(total_deaths AS INT)) AS 'Total de Mortes por PaÃ­s'
 FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL
 GROUP BY location
-ORDER BY 'Total de Mortes por País' DESC;
+ORDER BY 'Total de Mortes por PaÃ­s' DESC;
 
 --Total de Mortes por Continente
 --Showing Continents with the highest Death Count per Population
@@ -90,7 +90,7 @@ SELECT
 FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL;
 
---Total de Vacinados pela População
+--Total de Vacinados pela PopulaÃ§Ã£o
 --Looking at Total Population vs Vaccinations
 SELECT 
 	dea.continent, 
